@@ -43,8 +43,33 @@ mainScreenBg.addEventListener('load', (e) => {
     });
 })
 
+const verticalSliderSection = document.querySelector('#vertical-slider');
 
+const verticalSextSlider = new Swiper('.vertical-text-slider', {
+    direction: 'vertical',
+    watchOverflow: true,
+    slidesPerView: 1,
+    speed: 800,
+    allowTouchMove: false,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    on: {
+        init(swiper) {
+            const slidesLength = swiper.slides.length;
+            verticalSliderSection.style.height = `${(slidesLength + 1) * 100}vh`;
+            window.addEventListener('scroll', (e) => {
+                const sliderTrigger = verticalSliderSection.getBoundingClientRect().top <= 0;
+                if (sliderTrigger) {
+                    const slideNumber = Math.abs(Math.round(verticalSliderSection.getBoundingClientRect().top / (window.innerHeight)))
+                    verticalSextSlider.slideTo(slideNumber, 500);
+                }
+            })
+        }
 
-
-
-
+    }
+});
