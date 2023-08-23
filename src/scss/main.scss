@@ -1,0 +1,360 @@
+// тк мы к ним обращаемся везде ниже
+@import "utils/reset";
+@import "utils/vars";
+@import "vendors/vendors";
+
+.unselectable {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     not supported by any browser */
+}
+
+$index: calc(1vw + 1vh);
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #fff;
+  color: #000;
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  max-width: $desktopWidth;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media screen and (max-width: $tableWidth) {
+    max-width: 98%;
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: $smPhoneWidth) {
+    padding: 0 10px;
+  }
+}
+
+.btn {
+  font-size: 18px;
+  font-family: $mainFont;
+  font-weight: 600;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  line-height: 150%; /* 27px */
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease,
+    border-color 0.3s ease;
+  &:active {
+    transform: translateY(2px);
+  }
+  color: $brand-white;
+  border-radius: 27px;
+  background: $brand-pink;
+  box-shadow: 0px 5px 20px 0px rgba(250, 0, 86, 0.15);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.header__logo {
+  width: 95px;
+  height: 60px;
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+  }
+}
+.header__wrapper {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__link {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 0px 25px;
+}
+.main-screen {
+  padding-top: 160px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 27px */
+  padding-bottom: 400px;
+}
+.main-screen__bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  img,
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  transition: filter 1s ease-in-out !important;
+  filter: blur(8px);
+  &.aos-animate {
+    filter: blur(0px);
+  }
+}
+.main-screen__animated-svg {
+  svg .svg-elem-1 {
+    stroke-dashoffset: 958.314208984375px;
+    stroke-dasharray: 958.314208984375px;
+    -webkit-transition: stroke-dashoffset 1.3s
+      cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+  }
+
+  svg.aos-animate .svg-elem-1 {
+    stroke-dashoffset: 0;
+  }
+
+  svg .svg-elem-2 {
+    stroke-dashoffset: 958.314208984375px;
+    stroke-dasharray: 958.314208984375px;
+    -webkit-transition: stroke-dashoffset 1.3s
+      cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+  }
+
+  svg.aos-animate .svg-elem-2 {
+    stroke-dashoffset: 0;
+  }
+
+  svg .svg-elem-3 {
+    stroke-dashoffset: 958.3134765625px;
+    stroke-dasharray: 958.3134765625px;
+    -webkit-transition: stroke-dashoffset 1.3s
+      cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+  }
+
+  svg.aos-animate .svg-elem-3 {
+    stroke-dashoffset: 0;
+  }
+
+  svg .svg-elem-4 {
+    stroke-dashoffset: 958.3135375976562px;
+    stroke-dasharray: 958.3135375976562px;
+    -webkit-transition: stroke-dashoffset 1.3s
+      cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
+  }
+
+  svg.aos-animate .svg-elem-4 {
+    stroke-dashoffset: 0;
+  }
+
+  svg .svg-elem-5 {
+    stroke-dashoffset: 498px;
+    stroke-dasharray: 498px;
+    -webkit-transition: stroke-dashoffset 1.3s
+      cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s;
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s;
+  }
+
+  svg.aos-animate .svg-elem-5 {
+    stroke-dashoffset: 0;
+  }
+
+  svg .svg-elem-6 {
+    stroke-dashoffset: 494.87200927734375px;
+    stroke-dasharray: 494.87200927734375px;
+    -webkit-transition: stroke-dashoffset 1.3s
+      cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
+  }
+
+  svg.aos-animate .svg-elem-6 {
+    stroke-dashoffset: 0;
+  }
+
+  svg .svg-elem-7 {
+    stroke-dashoffset: 481.88714599609375px;
+    stroke-dasharray: 481.88714599609375px;
+    -webkit-transition: stroke-dashoffset 1.3s
+      cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s;
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s;
+  }
+
+  svg.aos-animate .svg-elem-7 {
+    stroke-dashoffset: 0;
+  }
+
+  svg .svg-elem-8 {
+    stroke-dashoffset: 514.6019287109375px;
+    stroke-dasharray: 514.6019287109375px;
+    -webkit-transition: stroke-dashoffset 1.3s
+      cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s;
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s;
+  }
+
+  svg.aos-animate .svg-elem-8 {
+    stroke-dashoffset: 0;
+  }
+
+  svg .svg-elem-9 {
+    stroke-dashoffset: 874px;
+    stroke-dasharray: 874px;
+    -webkit-transition: stroke-dashoffset 1.3s
+      cubic-bezier(0.47, 0, 0.745, 0.715) 0.96s;
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.96s;
+  }
+
+  svg.aos-animate .svg-elem-9 {
+    stroke-dashoffset: 0;
+  }
+}
+.main-screen__animated-svg {
+  position: relative;
+  margin: auto;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  width: 100%;
+  height: 100%;
+  max-width: 1230px;
+  max-height: 431px;
+  // background-color: rgba(255, 255, 255, 0.1);
+}
+.main-screen__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 24px 34px #1d0633;
+  font-size: 74px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 156%; /* 115.44px */
+  .bt {
+    text-transform: uppercase;
+  }
+}
+.main-screen__date,
+.main-screen__place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 37.5px */
+  .small-selection {
+    font-size: 18px;
+  }
+}
+.main-screen__date {
+  left: 4%;
+}
+.main-screen__place {
+  top: 52%;
+  right: 3%;
+}
+.main-screen__middle-text {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 37.5px */
+  margin-bottom: 180px;
+}
+
+.main-screen__large-text {
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 52.5px */
+}
