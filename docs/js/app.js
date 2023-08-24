@@ -21,8 +21,7 @@ document.body.addEventListener('click', (e) => {
 
 
 // window.scrollTo({ top: 0 });
-const mainScreenBg = document.querySelector('.main-screen__bg img,.main-screen__bg video');
-mainScreenBg.addEventListener('load', (e) => {
+window.addEventListener('load', (e) => {
     document.body.classList.remove('unloaded')
     setTimeout(() => {
         AOS.init({
