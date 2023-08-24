@@ -241,7 +241,7 @@ button {
   width: 100%;
   height: 100%;
   transition: filter 1s ease-in-out !important;
-  filter: blur(8px);
+  filter: blur(60px);
 }
 
 .main-screen__bg img,
@@ -610,7 +610,7 @@ body {
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(7%, 3%);
+  transform: translate(7%, 4%);
   filter: blur(60px);
   z-index: 2;
 }
@@ -621,7 +621,7 @@ body {
   height: 100%;
   object-fit: contain;
   animation-name: rotation;
-  animation-duration: 420s;
+  animation-duration: 320s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
