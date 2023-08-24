@@ -67,3 +67,26 @@ const verticalSextSlider = new Swiper('.vertical-text-slider', {
 const player = new Plyr('#player', {
     controls: ['play-large']
 });
+
+// Плавный скролл на сайте
+SmoothScroll({
+    // Время скролла 400 = 0.4 секунды
+    animationTime: 600,
+    // Размер шага в пикселях 
+    stepSize: window.innerHeight / 10,
+    // Ускорение 
+    accelerationDelta: 100,
+    // Максимальное ускорение
+    accelerationMax: 2,
+    // Поддержка клавиатуры
+    keyboardSupport: true,
+    // Шаг скролла стрелками на клавиатуре в пикселях
+    arrowScroll: 50,
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm: true,
+    pulseScale: 3,
+    pulseNormalize: 1,
+    // Поддержка тачпада
+    touchpadSupport: true,
+});
