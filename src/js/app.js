@@ -73,3 +73,8 @@ const verticalSextSlider = new Swiper('.vertical-text-slider', {
 
     }
 });
+
+
+const player = new Plyr('#player', {
+    controls: ['play-large']
+});

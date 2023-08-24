@@ -503,3 +503,136 @@ body {
     }
   }
 }
+
+.spinner-planet {
+  position: absolute;
+  bottom: -45vh;
+  left: 0;
+  height: 60vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.spinner-planet__container {
+  width: 200vw;
+  height: 200vw;
+  transform: translateX(-36%);
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: #000;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(7%, 3%);
+    filter: blur(60px);
+    z-index: 2;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    // object-position: center;
+    animation-name: rotation;
+    animation-duration: 220s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.section-title {
+  color: #fff;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 74.4px */
+}
+.info-section {
+  padding-bottom: 190px;
+  padding-top: 20vh;
+  background-color: #000;
+  .container {
+    max-width: 1260px;
+  }
+  .section-title {
+    margin-bottom: 147px;
+  }
+}
+
+.info-section__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 88px;
+  .list-item {
+    margin-bottom: 60px;
+    width: 50%;
+    display: flex;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    .list-item__ico {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-right: 30px;
+    }
+    &:nth-child(odd) {
+      padding-right: 60px;
+    }
+  }
+}
+
+.plyr {
+  border-radius: 29px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  .plyr__video-wrapper {
+    border-radius: 20px;
+  }
+  .plyr__poster {
+    background-size: cover;
+  }
+}
+
+.player__wrapper {
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 130px);
+    height: calc(100% + 120px);
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1325' height='764' viewBox='0 0 1325 764' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect opacity='0.3' x='627.054' y='1' width='538.815' height='538.815' transform='rotate(45 627.054 1)' stroke='white'/%3e%3crect opacity='0.3' x='659.5' y='1' width='538.815' height='538.815' transform='rotate(45 659.5 1)' stroke='white'/%3e%3crect opacity='0.3' x='691.946' y='1' width='538.815' height='538.815' transform='rotate(45 691.946 1)' stroke='white'/%3e%3crect opacity='0.3' x='275' y='108' width='387.495' height='387.495' transform='rotate(45 275 108)' stroke='white'/%3e%3crect opacity='0.3' x='1050' y='108' width='387.495' height='387.495' transform='rotate(45 1050 108)' stroke='white'/%3e%3c/svg%3e ");
+  }
+}
+
+.plyr__control--overlaid {
+  svg {
+    display: none;
+  }
+  width: 232px !important;
+  height: 205px !important;
+  background-color: transparent;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='232' height='205' viewBox='0 0 232 205' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle opacity='0.6' cx='116.5' cy='102.5' r='83.5' fill='black'/%3e%3cpath d='M143.75 102.682L101 127.363L101 78L143.75 102.682Z' fill='%23FA0056'/%3e%3cpath opacity='0.6' d='M54.5 0.864888L230.998 102.5L54.5 204.135L54.5 0.864888Z' stroke='url(%23paint0_linear_78_2506)'/%3e%3cpath opacity='0.6' d='M177.5 204.135L1.00197 102.5L177.5 0.864886L177.5 204.135Z' stroke='url(%23paint1_linear_78_2506)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_78_2506' x1='232' y1='102.5' x2='54' y2='102.5' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='white'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient id='paint1_linear_78_2506' x1='1.2223e-06' y1='102.5' x2='178' y2='102.5' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='white'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ") !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
