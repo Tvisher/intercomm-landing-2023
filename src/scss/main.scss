@@ -528,6 +528,9 @@ body {
   height: 60vh;
   width: 100vw;
   overflow: hidden;
+  &._reverse {
+    transform: scale(-1, 1);
+  }
 }
 .spinner-planet__container {
   padding: 80px;
@@ -586,9 +589,14 @@ body {
 }
 .info-section {
   overflow: hidden;
-  padding-bottom: 190px;
+  // margin-bottom: -215px;
   padding-top: 20vh;
-  background-color: #000;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
   .container {
     max-width: 1260px;
   }
@@ -725,4 +733,157 @@ body {
       height: 100%;
     }
   }
+}
+
+.flying-map {
+  padding-top: 215px;
+  position: relative;
+  height: 1800px;
+}
+.flying-map__title {
+  color: #fff;
+  text-align: center;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 74.4px */
+}
+
+.flying-map__block {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  .block__image {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .block__content {
+    max-width: 420px;
+  }
+  .block__date {
+    color: #fa0056;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 55.2px */
+    margin-bottom: 24px;
+  }
+  .block__title {
+    margin-bottom: 24px;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 31.2px */
+  }
+  .block__text {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+  &[data-block="1"] {
+    left: 46.5%;
+    top: 120px;
+    .block__image {
+      margin-right: 50px;
+      width: 107px;
+      height: 107px;
+    }
+    .block__border {
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-89%, -40%);
+      width: 2060px;
+      height: 2060px;
+      background-image: url(../img/orbit.svg);
+      background-repeat: no-repeat;
+      background-size: 2060px;
+      background-position: center;
+      pointer-events: none;
+    }
+  }
+  &[data-block="2"] {
+    left: 17%;
+    top: 360px;
+    .block__image {
+      width: 134px;
+      height: 134px;
+      margin-right: 50px;
+    }
+    .block__border {
+      position: absolute;
+      width: 145%;
+      height: 145%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='204' height='204' viewBox='0 0 204 204' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect opacity='0.6' x='1.01465' y='59.7959' width='154.785' height='154.785' transform='rotate(-22.3189 1.01465 59.7959)' stroke='white'/%3e%3crect opacity='0.3' x='60.5381' y='1' width='154.402' height='154.402' transform='rotate(22.6811 60.5381 1)' stroke='white'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &[data-block="3"] {
+    left: 51%;
+    top: 630px;
+    .block__image {
+      width: 121px;
+      height: 121px;
+      margin-right: 50px;
+    }
+    .block__border {
+      position: absolute;
+      width: 230%;
+      height: 230%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-49%, -51%);
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='276' height='276' viewBox='0 0 276 276' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cellipse opacity='0.6' cx='137.726' cy='137.726' rx='66.1442' ry='66.531' stroke='white'/%3e%3cpath opacity='0.6' d='M207 69.0002L191.459 84.5408' stroke='white'/%3e%3cpath opacity='0.6' d='M84.54 191.46L68.9995 207.001' stroke='white'/%3e%3cpath opacity='0.6' d='M207 207L191.459 191.46' stroke='white'/%3e%3cpath opacity='0.6' d='M84.54 84.5408L68.9995 69.0002' stroke='white'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &[data-block="4"] {
+    left: 3%;
+    top: 820px;
+    .block__image {
+      width: 218px;
+      height: 218px;
+      margin-right: 50px;
+    }
+    .block__border {
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+    }
+  }
+}
+
+.flying-map__btn {
+  position: absolute;
+  left: 50%;
+  bottom: 280px;
+  transform: translateX(-50%);
 }
