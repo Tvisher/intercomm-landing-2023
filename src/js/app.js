@@ -90,3 +90,84 @@ SmoothScroll({
     // Поддержка тачпада
     touchpadSupport: true,
 });
+
+
+const cardSliders = document.querySelectorAll('.cards-slider__container');
+cardSliders.forEach(sliderContainer => {
+    const sliderEl = sliderContainer.querySelector('.cards-slider');
+    const prewBtn = sliderContainer.querySelector('.swiper-button-prev');
+    const nextBtn = sliderContainer.querySelector('.swiper-button-next');
+
+    const sliderSwiper = new Swiper(sliderEl, {
+        slidesPerView: 3,
+        spaceBetween: 111,
+        speed: 800,
+        navigation: {
+            nextEl: nextBtn,
+            prevEl: prewBtn,
+        },
+    });
+})
+
+
+const paralaxElems = document.querySelectorAll('[data-id="paralax-block"]');
+if (paralaxElems.length > 0) {
+    paralaxElems.forEach(elem => {
+        const elemtntParent = elem.closest('section');
+        const parallaxInstance = new Parallax(elem, {
+            inputElement: elemtntParent,
+            hoverOnly: true,
+            relativeInput: true
+        });
+    });
+}
+
+
+//Аккардеон секции faq
+$("[data-toggle-elem]").click(function () {
+    $(this).parent().toggleClass('open')
+    $(this).parent().find("[data-toggle-content]").slideToggle("slow");
+});
+
+
+
+
+
+const halfSlider = new Swiper('.half-slider', {
+    slidesPerView: 1,
+    speed: 800,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+});
+
+
+
+const centeredSlider = new Swiper('.centered-slider', {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    loop: true,
+    speed: 800,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+    },
+
+});
+
+
+document.querySelector(".copy-block__btn").addEventListener("click", function () {
+    var sourceText = document.querySelector(".copy-block__text");
+    navigator.clipboard.writeText(sourceText.textContent).then(function () {
+        document.querySelector(".copy-block__btn").classList.add('copied')
+    }).catch(function (err) {
+        console.error("Ошибка при копировании: ", err);
+    });
+});
