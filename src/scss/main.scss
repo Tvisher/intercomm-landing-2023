@@ -1134,11 +1134,13 @@ body {
     width: 320px;
     height: 300px;
     left: 55%;
-    img {
-      animation-name: rotation;
-      animation-duration: 120s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
+    .conf-section__paralax__container.aos-animate {
+      img {
+        animation-name: rotation;
+        animation-duration: 120s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
     }
   }
 
@@ -1147,12 +1149,14 @@ body {
     width: 450px;
     height: 450px;
     left: 25%;
-    img {
-      animation-name: rotation;
-      animation-direction: reverse;
-      animation-duration: 40s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
+    .conf-section__paralax__container.aos-animate {
+      img {
+        animation-name: rotation;
+        animation-direction: reverse;
+        animation-duration: 40s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
     }
   }
 }
@@ -1170,6 +1174,9 @@ body {
     margin-bottom: 82px;
   }
   .faq-item {
+    &:first-child {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
@@ -1515,6 +1522,7 @@ body {
 }
 
 .centered-slider-section {
+  background: #000;
   padding-bottom: 200px;
   .centered-slider {
     overflow: visible;
@@ -1620,5 +1628,90 @@ body {
         }
       }
     }
+  }
+}
+
+.map-section {
+  background: #000;
+  padding-bottom: 200px;
+  .section-title {
+    text-align: center;
+    margin-bottom: 54px;
+  }
+  .map__container {
+    &.aos-animate {
+      &::before {
+        animation-name: rotation;
+        animation-duration: 120s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    }
+    position: relative;
+    &::before {
+      z-index: 1s;
+      position: absolute;
+      left: -180px;
+      top: -180px;
+      width: 1000px;
+      height: 1000px;
+      content: "";
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1039' height='1039' viewBox='0 0 1039 1039' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect opacity='0.6' x='1.07227' y='302.839' width='794.618' height='794.618' transform='rotate(-22.3189 1.07227 302.839)' stroke='white'/%3e%3crect opacity='0.3' x='306.647' y='1' width='792.652' height='792.652' transform='rotate(22.6811 306.647 1)' stroke='white'/%3e%3c/svg%3e ");
+    }
+  }
+  .map__wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 675px;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.list-section {
+  background: #000;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  .section-title {
+    margin-bottom: 100px;
+  }
+}
+
+.vertical-slider {
+  &::before {
+    transform: rotate(4deg);
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -200px;
+    width: 600px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='815' height='1832' viewBox='0 0 815 1832' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='0.6' d='M262.946 700.681C121.168 946.247 34.5639 1192.64 9.14134 1392.49C-3.57009 1492.41 -0.982528 1580.67 17.6325 1651.36C36.2468 1722.04 70.8755 1775.12 122.222 1804.76C173.569 1834.41 236.851 1837.86 307.373 1818.64C377.898 1799.42 455.626 1757.53 535.806 1696.56C696.164 1574.62 866.248 1376.42 1008.03 1130.85C1149.8 885.286 1236.41 638.89 1261.83 439.047C1274.54 339.124 1271.95 250.865 1253.34 180.178C1234.72 109.492 1200.1 56.4141 1148.75 26.7689C1097.4 -2.87625 1034.12 -6.32644 963.598 12.8958C893.073 32.1186 815.345 74.007 735.165 134.977C574.808 256.915 404.724 455.115 262.946 700.681Z' stroke='url(%23paint0_linear_137_1110)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_137_1110' x1='513' y1='485.5' x2='950' y2='121' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='white'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+  }
+}
+
+.rocket {
+  width: 214px;
+  height: 205px;
+  position: absolute;
+  right: 150px;
+  bottom: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
