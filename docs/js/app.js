@@ -19,6 +19,14 @@ document.body.addEventListener('click', (e) => {
     const target = e.target;
 });
 
+const bgVideo = new Plyr('#bgVideo', {
+    controls: [],
+    muted: true
+});
+
+const player = new Plyr('#player', {
+    controls: ['play-large']
+});
 
 // window.scrollTo({ top: 0 });
 window.addEventListener('load', (e) => {
@@ -30,6 +38,7 @@ window.addEventListener('load', (e) => {
             easing: 'ease', // default easing for AOS animations
             once: true, // whether animation should happen only once - while scrolling down
         });
+        bgVideo.play()
     }, 200)
 })
 
@@ -64,9 +73,8 @@ const verticalSextSlider = new Swiper('.vertical-text-slider', {
 });
 
 
-const player = new Plyr('#player', {
-    controls: ['play-large']
-});
+
+
 
 // Плавный скролл на сайте
 SmoothScroll({

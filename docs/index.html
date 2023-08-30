@@ -78,7 +78,11 @@
     <section class="main-screen">
         <div class="main-screen__bg" data-aos>
             <!-- <img src="./img/main-image.png" alt=""> -->
-            <img src="./img/main-image-large.jpg" alt="">
+            <!-- <img src="./img/main-image-large.jpg" alt=""> -->
+            <video id="bgVideo" playsinline controls data-poster="./img/main-image-large.jpg">
+                <source src="./files/video-bg.mp4" type="video/mp4" />
+                <!-- <source src="/path/to/video.webm" type="video/webm" /> -->
+            </video>
         </div>
         <div class="container">
             <div class="main-screen__wrapper">
@@ -228,8 +232,10 @@
                 </div>
             </div>
         </div>
-        <div class="rocket" data-aos="fade-in">
-            <img src="./img/rocket.png" alt="">
+        <div class="rocket__w">
+            <div class="rocket" data-aos>
+                <img src="./img/rocket.png" alt="">
+            </div>
         </div>
     </section>
     <div class="hidden-wrapper">

@@ -195,6 +195,11 @@ button {
   &.aos-animate {
     filter: blur(0px);
   }
+  .plyr {
+    border-radius: 0;
+    border: none;
+    padding: 0;
+  }
 }
 .main-screen__animated-svg {
   svg .svg-elem-1 {
@@ -1706,12 +1711,36 @@ body {
   width: 214px;
   height: 205px;
   position: absolute;
-  right: 150px;
-  bottom: 0;
+  right: 400px;
+  bottom: 0px;
+  z-index: -1;
   img {
-    transform: rotate(-4deg);
+    transform: rotate(-16.5deg);
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+  &.aos-animate {
+    // transform-origin: 1200% 700%;
+    // animation: rocketFly 4s linear infinite;
+  }
+}
+.rocket__w {
+  position: absolute;
+  left: 0;
+  // bottom: 5vh;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes rocketFly {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

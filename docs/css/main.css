@@ -271,6 +271,12 @@ button {
   filter: blur(0px);
 }
 
+.main-screen__bg .plyr {
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
 .main-screen__animated-svg svg .svg-elem-1 {
   stroke-dashoffset: 958.3142089844px;
   stroke-dasharray: 958.3142089844px;
@@ -1911,15 +1917,35 @@ body {
   width: 214px;
   height: 205px;
   position: absolute;
-  right: 150px;
-  bottom: 0;
+  right: 400px;
+  bottom: 0px;
+  z-index: -1;
 }
 
 .rocket img {
-  transform: rotate(-4deg);
+  transform: rotate(-16.5deg);
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.rocket__w {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes rocketFly {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 768px) {
