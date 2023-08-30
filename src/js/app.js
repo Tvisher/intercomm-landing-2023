@@ -21,7 +21,8 @@ document.body.addEventListener('click', (e) => {
 
 const bgVideo = new Plyr('#bgVideo', {
     controls: [],
-    muted: true
+    muted: true,
+    loop: { active: true }
 });
 
 const player = new Plyr('#player', {
