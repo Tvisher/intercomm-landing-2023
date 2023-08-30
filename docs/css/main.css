@@ -1895,7 +1895,6 @@ body {
 }
 
 .vertical-slider::before {
-  transform: rotate(4deg);
   content: "";
   position: absolute;
   right: 0;
@@ -1917,6 +1916,7 @@ body {
 }
 
 .rocket img {
+  transform: rotate(-4deg);
   width: 100%;
   height: 100%;
   object-fit: contain;
