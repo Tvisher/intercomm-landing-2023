@@ -254,7 +254,6 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
 }
 
 .main-screen__bg::before {
@@ -276,6 +275,10 @@ button {
   border: none;
   padding: 0;
   height: 100%;
+}
+
+.main-screen__bg .plyr .plyr__video-wrapper {
+  border-radius: 0;
 }
 
 .main-screen__animated-svg svg .svg-elem-1 {
@@ -463,83 +466,6 @@ button {
   /* 52.5px */
 }
 
-.vertical-slider_bg svg .svg-elem-1 {
-  stroke-dashoffset: 1455.2303466797px;
-  stroke-dasharray: 1455.2303466797px;
-  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
-  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
-}
-
-.vertical-slider_bg.aos-animate .svg-elem-1 {
-  stroke-dashoffset: 2910.4606933594px;
-}
-
-.vertical-slider_bg svg .svg-elem-2 {
-  stroke-dashoffset: 1455.2303466797px;
-  stroke-dasharray: 1455.2303466797px;
-  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
-  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
-}
-
-.vertical-slider_bg.aos-animate .svg-elem-2 {
-  stroke-dashoffset: 2910.4606933594px;
-}
-
-.vertical-slider_bg svg .svg-elem-3 {
-  stroke-dashoffset: 445.4706726074px;
-  stroke-dasharray: 445.4706726074px;
-  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
-  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
-}
-
-.vertical-slider_bg.aos-animate .svg-elem-3 {
-  stroke-dashoffset: 890.9413452148px;
-}
-
-.vertical-slider_bg svg .svg-elem-4 {
-  stroke-dashoffset: 445.4713439941px;
-  stroke-dasharray: 445.4713439941px;
-  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
-  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
-}
-
-.vertical-slider_bg.aos-animate .svg-elem-4 {
-  stroke-dashoffset: 890.9426879883px;
-}
-
-.vertical-slider_bg svg .svg-elem-5 {
-  stroke-dashoffset: 1455.23046875px;
-  stroke-dasharray: 1455.23046875px;
-  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s;
-  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s;
-}
-
-.vertical-slider_bg.aos-animate .svg-elem-5 {
-  stroke-dashoffset: 2910.4609375px;
-}
-
-.vertical-slider_bg svg .svg-elem-6 {
-  stroke-dashoffset: 1455.23046875px;
-  stroke-dasharray: 1455.23046875px;
-  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
-  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
-}
-
-.vertical-slider_bg.aos-animate .svg-elem-6 {
-  stroke-dashoffset: 2910.4609375px;
-}
-
-.vertical-slider_bg svg .svg-elem-7 {
-  stroke-dashoffset: 1386px;
-  stroke-dasharray: 1386px;
-  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s;
-  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s;
-}
-
-.vertical-slider_bg.aos-animate .svg-elem-7 {
-  stroke-dashoffset: 2772px;
-}
-
 body {
   background-image: url(../img/slider-bg.jpg);
   background-size: contain;
@@ -549,6 +475,16 @@ body {
 .vertical-slider {
   position: relative;
   height: 100vh;
+}
+
+.vertical-slider::before {
+  position: absolute;
+  width: 100%;
+  content: "";
+  height: 50vh;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .vertical-slider .vertical-slider_bg {
@@ -1199,6 +1135,12 @@ body {
   background-position: center;
 }
 
+.conf-section .list-item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .conf-section .list-item {
   width: 50%;
   display: flex;
@@ -1307,9 +1249,13 @@ body {
 }
 
 .faq-section {
-  background: #000;
   padding-top: 200px;
   padding-bottom: 50px;
+}
+
+.faq-section.no-fill {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
 }
 
 .faq-section .cards-slider__title {
@@ -1918,7 +1864,7 @@ body {
 }
 
 .spinner-planet.aos-animate .rocket {
-  animation: rocketFly 6s linear infinite;
+  animation: rocketFly 6s linear forwards;
 }
 
 @keyframes rocketFly {

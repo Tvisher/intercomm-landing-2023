@@ -14,24 +14,22 @@ function testWebP() {
 // Проверка поддержки webP 
 testWebP();
 
-//логика работы меню бургер
-document.body.addEventListener('click', (e) => {
-    const target = e.target;
-});
 
 const bgVideo = new Plyr('#bgVideo', {
-    controls: [],
+    // controls: [],
     muted: true,
     loop: { active: true }
 });
 
 const player = new Plyr('#player', {
-    controls: ['play-large']
+    controls: ['play-large'],
+
+    muted: false,
 });
 
-// window.scrollTo({ top: 0 });
-window.addEventListener('load', (e) => {
+bgVideo.on('ready', (event) => {
     document.body.classList.remove('unloaded')
+    bgVideo.play()
     setTimeout(() => {
         AOS.init({
             delay: 0, // values from 0 to 3000, with step 50ms
@@ -39,9 +37,17 @@ window.addEventListener('load', (e) => {
             easing: 'ease', // default easing for AOS animations
             once: true, // whether animation should happen only once - while scrolling down
         });
-        bgVideo.play()
-    }, 200)
-})
+    }, 500);
+});
+
+// window.scrollTo({ top: 0 });
+// window.addEventListener('load', (e) => {
+//     document.body.classList.remove('unloaded')
+
+//     setTimeout(() => {
+//         bgVideo.play()
+//     }, 600);
+// })
 
 const verticalSliderSection = document.querySelector('#vertical-slider');
 const verticalSextSlider = new Swiper('.vertical-text-slider', {
@@ -144,6 +150,10 @@ $("[data-toggle-elem]").click(function () {
 
 const halfSlider = new Swiper('.half-slider', {
     slidesPerView: 1,
+    autoplay: {
+        delay: 3000,
+    },
+    loop: 1,
     speed: 800,
     pagination: {
         el: '.swiper-pagination',
