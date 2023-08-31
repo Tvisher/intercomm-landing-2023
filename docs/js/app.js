@@ -16,15 +16,13 @@ testWebP();
 
 
 const bgVideo = new Plyr('#bgVideo', {
-    // controls: [],
+    controls: [],
     muted: true,
     loop: { active: true }
 });
 
 const player = new Plyr('#player', {
     controls: ['play-large'],
-
-    muted: false,
 });
 
 bgVideo.on('ready', (event) => {
@@ -43,7 +41,12 @@ bgVideo.on('ready', (event) => {
 // window.scrollTo({ top: 0 });
 // window.addEventListener('load', (e) => {
 //     document.body.classList.remove('unloaded')
-
+//     AOS.init({
+//         delay: 0, // values from 0 to 3000, with step 50ms
+//         duration: 1200, // values from 0 to 3000, with step 50ms
+//         easing: 'ease', // default easing for AOS animations
+//         once: true, // whether animation should happen only once - while scrolling down
+//     });
 //     setTimeout(() => {
 //         bgVideo.play()
 //     }, 600);
