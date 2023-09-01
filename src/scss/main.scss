@@ -1771,16 +1771,19 @@ body {
 .galaxy-video {
   height: 800px;
   width: 100%;
-  .galaxy-video__wrapper {
-    width: 100%;
-    height: 100%;
-    video {
-      opacity: 0.7;
-      animation: galaxyFilters 6s linear infinite;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+  position: relative;
+  video {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    animation: galaxyFilters 6s linear infinite;
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    margin: auto;
   }
 }
 
