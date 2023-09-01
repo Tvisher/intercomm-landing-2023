@@ -40,6 +40,7 @@ const player = new Plyr('#player', {
 
 window.scrollTo({ top: 0 });
 window.addEventListener('load', (e) => {
+    console.log('load');
     document.body.classList.remove('unloaded')
     AOS.init({
         delay: 0, // values from 0 to 3000, with step 50ms
