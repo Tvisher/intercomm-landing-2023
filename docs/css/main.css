@@ -191,6 +191,7 @@ button {
 }
 
 .header__logo {
+  flex-shrink: 0;
   width: 95px;
   height: 60px;
 }
@@ -1256,8 +1257,7 @@ body {
 }
 
 .faq-section.no-fill {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+  background: transparent;
 }
 
 .faq-section .cards-slider__title {
@@ -1881,13 +1881,15 @@ body {
 
 .galaxy-video {
   height: 800px;
+  margin-top: -200px;
+  margin-bottom: -200px;
   width: 100%;
   position: relative;
+  z-index: -1;
 }
 
 .galaxy-video video {
   position: absolute;
-  z-index: -1;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -1910,6 +1912,103 @@ body {
 
   100% {
     filter: contrast(100%);
+  }
+}
+
+@media (max-width: 1420px) {
+  .info-section {
+    padding-top: 30vh;
+  }
+
+  .section-title {
+    font-size: 56px;
+  }
+
+  .info-section .section-title {
+    margin-bottom: 50px;
+  }
+
+  .sliders-section {
+    padding-top: 30vh;
+  }
+
+  .sliders-section .sliders-section__wrapper::before {
+    width: 100%;
+    height: 100%;
+  }
+
+  .sliders-section .sliders-section__wrapper {
+    padding: 100px 0;
+  }
+
+  .conf-section .conf-section__wrapper {
+    padding-bottom: 500px;
+  }
+
+  .faq-section {
+    padding-bottom: 100px;
+  }
+
+  .expo-section .expo-section__title {
+    font-size: 88px;
+  }
+
+  .expo-section {
+    padding: 150px 0;
+  }
+
+  .expo-section .conf-section__paralax__container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .expo-section .conf-section__paralax {
+    left: 70%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .main-screen__date,
+  .main-screen__place {
+    font-size: 1.5vw;
+  }
+
+  .main-screen__date {
+    left: 3.5%;
+    top: 48%;
+  }
+
+  .main-screen__place {
+    top: 50%;
+    right: 4%;
+  }
+
+  .main-screen {
+    padding-bottom: 130px;
+  }
+
+  .main-screen__title {
+    font-size: 62px;
+  }
+
+  .main-screen__middle-text {
+    margin-bottom: 50px;
+  }
+
+  .vertical-text-slider .swiper-pagination {
+    right: 20px;
+  }
+
+  .vertical-text-slider .swiper-slide {
+    font-size: 3vw;
+  }
+
+  .vertical-slider .vertical-slider_bg {
+    padding: 0px 40px;
+  }
+
+  .vertical-text-slider {
+    padding: 0px 60px;
   }
 }
 
