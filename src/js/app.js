@@ -194,3 +194,7 @@ document.querySelector(".copy-block__btn").addEventListener("click", function ()
         console.error("Ошибка при копировании: ", err);
     });
 });
+
+
+fetch('https://devmw.unipro.energy/ajax/map.php')
+    .then(res => console.log(res))
