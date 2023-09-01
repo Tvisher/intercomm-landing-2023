@@ -198,7 +198,7 @@ document.querySelector(".copy-block__btn").addEventListener("click", function ()
 
 
 
-fetch('https://devmw.unipro.energy/ajax/map.php', {
+fetch('https://devmw.unipro.energy/ajax/map.php',
     {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "no-cors", // no-cors, *cors, same-origin
