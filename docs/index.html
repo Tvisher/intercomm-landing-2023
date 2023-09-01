@@ -18,6 +18,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="preload" as="image" href="./img/main-image-large.jpg">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0db64c2c-27fb-4602-9f62-88e37d902183&lang=ru_RU"
+        type="text/javascript">
+        </script>
     <script> </script>
 </head>
 
@@ -205,20 +208,25 @@
                 </svg>
             </div>
             <div class="swiper-wrapper">
-                <div class="swiper-slide">1<br> 2023 год снова поставил перед
-                    вызовами компании и людей.
+                <div class="swiper-slide">
+                    <div class="vertical-slider_text"> Нейросети, тотальная диджитализация, технологический суверенитет
+                    </div>
                 </div>
-                <div class="swiper-slide">2<br> 2023 год снова поставил перед
-                    вызовами компании и людей.
+                <div class="swiper-slide">
+                    <div class="vertical-slider_text"> Ультра-выгорание, кадровый голод, Полная неопределенность </div>
                 </div>
-                <div class="swiper-slide">3<br> 2023 год снова поставил перед
-                    вызовами компании и людей.
+                <div class="swiper-slide">
+                    <div class="vertical-slider_text"> Трансформация корпоративной культуры, новые контуры профессии,
+                        полная
+                        перестройка рынка</div>
                 </div>
-                <div class="swiper-slide">4<br> 2023 год снова поставил перед
-                    вызовами компании и людей.
+                <div class="swiper-slide">
+                    <div class="vertical-slider_text"> и внутриком в эпицентре этого турбулентного поля.</div>
                 </div>
-                <div class="swiper-slide">5<br> 2023 год снова поставил перед
-                    вызовами компании и людей.
+                <div class="swiper-slide">
+                    <div class="vertical-slider_text"> Посвящаем InterComm 2023 людям, которые создают свой космос,
+                        несмотря ни на
+                        что. </div>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -239,7 +247,7 @@
         <section class="info-section">
             <div class="container">
                 <h2 class="section-title" data-aos="fade-in">
-                    Главные вызовы InterComm 2023
+                    Главные тезисы InterComm 2023
                 </h2>
                 <ul class="interesting__list">
                     <li class="list-item" data-aos="fade-in">
@@ -564,6 +572,21 @@
                         <div class="block__date">Обучение</div>
                         <div class="block__title">
                             Развивай или отпускай: развитие сотрудников как часть культурного кода
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flying-map__block" data-block="5">
+                    <div class="block__planet">
+                        <div class="block__image">
+                            <img src="./img/planet-x.png" alt="" data-aos="zoom-in" data-aos-duration="1200">
+                            <div class="block__border" data-aos="fade-in" data-aos-duration="1200"></div>
+                        </div>
+                    </div>
+                    <div class="block__content" data-aos="fade-left">
+                        <div class="block__date">Аналитика</div>
+                        <div class="block__title">
+                            Корпкультуры 2023: как меняется мир, в котором мы работаем?
                         </div>
                     </div>
                 </div>
@@ -1164,7 +1187,8 @@
                 </h2>
                 <div class="map__container" data-aos="fade-in" data-aos-duration="1200">
                     <div class="map__wrapper">
-                        <img src="./img/map.jpg" alt="">
+                        <!-- <img src="./img/map.jpg" alt=""> -->
+                        <div id="map"></div>
                     </div>
                 </div>
             </div>
@@ -1303,9 +1327,6 @@
 
                 </div>
             </div>
-        </section>
-        <section class="galaxy-video">
-            <video src="./files/galaxy.mp4" playsinline muted autoplay loop></video>
         </section>
         <section class="list-section">
             <div class="container">
@@ -1506,6 +1527,9 @@
                 </ul>
             </div>
         </section>
+        <section class="galaxy-video">
+            <video src="./files/galaxy.mp4" playsinline muted autoplay loop></video>
+        </section>
         <section class="organizers-section" data-aos>
             <div class="container">
                 <h4 class="section-title">Организаторы </h4>
@@ -1671,6 +1695,61 @@
         </section>
     </div>
 </main>
+<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    // ymaps.ready(init);
+    // function init() {
+    //     // Создание карты.
+    //     var myMap = new ymaps.Map("map", {
+    //         // Координаты центра карты.
+    //         // Порядок по умолчанию: «широта, долгота».
+    //         // Чтобы не определять координаты центра карты вручную,
+    //         // воспользуйтесь инструментом Определение координат.
+    //         center: [55.781874, 37.698124],
+    //         // Уровень масштабирования. Допустимые значения:
+    //         // от 0 (весь мир) до 19.
+    //         zoom: 18
+    //     });
+    // }
+
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+            center: [55.781874, 37.698124],
+            zoom: 19,
+            controls: []
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div class="no-invert" style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
+
+            myPlacemarkWithContent = new ymaps.Placemark([55.781874, 37.698124], {
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                iconImageHref: './img/map-ico.svg',
+                // Размеры метки.
+                iconImageSize: [48, 48],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [60, -60],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 15],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+            });
+
+        myMap.geoObjects
+            .add(myPlacemarkWithContent)
+    });
+</script>
+
 <footer> </footer>
 </body>
 

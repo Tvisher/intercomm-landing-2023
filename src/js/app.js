@@ -75,7 +75,7 @@ const verticalSextSlider = new Swiper('.vertical-text-slider', {
                 const sliderTrigger = verticalSliderSection.getBoundingClientRect().top <= 0;
                 if (sliderTrigger) {
                     const slideNumber = Math.abs(Math.round(verticalSliderSection.getBoundingClientRect().top / (window.innerHeight)))
-                    verticalSextSlider.slideTo(slideNumber, 500);
+                    verticalSextSlider.slideTo(slideNumber, 800);
                 }
             })
         }
@@ -198,18 +198,18 @@ document.querySelector(".copy-block__btn").addEventListener("click", function ()
 
 
 
-fetch('https://devmw.unipro.energy/ajax/map.php',
-    {
-        method: "GET", // *GET, POST, PUT, DELETE, etc.
-        mode: "no-cors", // no-cors, *cors, same-origin
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        headers: {
-            "Content-Type": "application/json",
-        },
-    })
-    .then((response) => {
-        return response.json();
-    })
-    .then((data) => {
-        console.log(data);
-    });
+// fetch('https://devmw.unipro.energy/ajax/map.php',
+//     {
+//         method: "GET",
+//         mode: "no-cors",
+//         cache: "no-cache",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//     })
+//     .then((response) => {
+//         return response.json();
+//     })
+//     .then((data) => {
+//         console.log(data);
+//     });
