@@ -196,5 +196,20 @@ document.querySelector(".copy-block__btn").addEventListener("click", function ()
 });
 
 
-fetch('https://devmw.unipro.energy/ajax/map.php')
-    .then(res => console.log(res))
+
+
+fetch('https://devmw.unipro.energy/ajax/map.php', {
+    {
+        method: "GET", // *GET, POST, PUT, DELETE, etc.
+        mode: "no-cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+    });
