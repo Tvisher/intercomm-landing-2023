@@ -22,21 +22,9 @@ const bgVideo = new Plyr('#bgVideo', {
 });
 
 const player = new Plyr('#player', {
-    controls: ['play-large'],
+    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'fullscreen'],
 });
 
-// bgVideo.on('ready', (event) => {
-//     document.body.classList.remove('unloaded')
-//     bgVideo.play()
-//     setTimeout(() => {
-//         AOS.init({
-//             delay: 0, // values from 0 to 3000, with step 50ms
-//             duration: 1200, // values from 0 to 3000, with step 50ms
-//             easing: 'ease', // default easing for AOS animations
-//             once: true, // whether animation should happen only once - while scrolling down
-//         });
-//     }, 500);
-// });
 
 window.scrollTo({ top: 0 });
 window.addEventListener('load', (e) => {
