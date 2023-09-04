@@ -106,12 +106,28 @@ cardSliders.forEach(sliderContainer => {
     const nextBtn = sliderContainer.querySelector('.swiper-button-next');
 
     const sliderSwiper = new Swiper(sliderEl, {
-        slidesPerView: 3,
-        spaceBetween: 111,
         speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 20,
         navigation: {
             nextEl: nextBtn,
             prevEl: prewBtn,
+        },
+        breakpoints: {
+
+            580: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            900: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1300: {
+                slidesPerView: 3,
+                spaceBetween: 111,
+            }
+
         },
     });
 })
