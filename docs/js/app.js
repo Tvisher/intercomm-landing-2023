@@ -127,7 +127,6 @@ cardSliders.forEach(sliderContainer => {
                 slidesPerView: 3,
                 spaceBetween: 111,
             }
-
         },
     });
 })
@@ -202,18 +201,3 @@ document.querySelector(".copy-block__btn").addEventListener("click", function ()
 
 
 
-// fetch('https://devmw.unipro.energy/ajax/map.php',
-//     {
-//         method: "GET",
-//         mode: "no-cors",
-//         cache: "no-cache",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//     })
-//     .then((response) => {
-//         return response.json();
-//     })
-//     .then((data) => {
-//         console.log(data);
-//     });
