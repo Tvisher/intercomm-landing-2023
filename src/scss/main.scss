@@ -2762,4 +2762,8 @@ body {
   .partners-section {
     padding-bottom: 50px;
   }
+
+  .faq-section .faq-item.open .faq-item__btn span:nth-child(1) {
+    transform: rotate(90deg) translateX(-8px);
+  }
 }

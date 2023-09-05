@@ -76,27 +76,29 @@ const verticalSextSlider = new Swiper('.vertical-text-slider', {
 
 
 // Плавный скролл на сайте
-SmoothScroll({
-    // Время скролла 400 = 0.4 секунды
-    animationTime: 600,
-    // Размер шага в пикселях 
-    stepSize: window.innerHeight / 10,
-    // Ускорение 
-    accelerationDelta: 100,
-    // Максимальное ускорение
-    accelerationMax: 2,
-    // Поддержка клавиатуры
-    keyboardSupport: true,
-    // Шаг скролла стрелками на клавиатуре в пикселях
-    arrowScroll: 50,
-    // Pulse (less tweakable)
-    // ratio of "tail" to "acceleration"
-    pulseAlgorithm: true,
-    pulseScale: 3,
-    pulseNormalize: 1,
-    // Поддержка тачпада
-    touchpadSupport: true,
-});
+if (window.innerWidth > 1024) {
+    SmoothScroll({
+        // Время скролла 400 = 0.4 секунды
+        animationTime: 600,
+        // Размер шага в пикселях 
+        stepSize: window.innerHeight / 10,
+        // Ускорение 
+        accelerationDelta: 100,
+        // Максимальное ускорение
+        accelerationMax: 2,
+        // Поддержка клавиатуры
+        keyboardSupport: true,
+        // Шаг скролла стрелками на клавиатуре в пикселях
+        arrowScroll: 50,
+        // Pulse (less tweakable)
+        // ratio of "tail" to "acceleration"
+        pulseAlgorithm: true,
+        pulseScale: 3,
+        pulseNormalize: 1,
+        // Поддержка тачпада
+        touchpadSupport: true,
+    });
+}
 
 
 const cardSliders = document.querySelectorAll('.cards-slider__container');
