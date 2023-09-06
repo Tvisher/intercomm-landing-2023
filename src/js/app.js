@@ -76,30 +76,30 @@ const verticalSextSlider = new Swiper('.vertical-text-slider', {
 
 
 
-// Плавный скролл на сайте
-if (window.innerWidth > 1024) {
-    SmoothScroll({
-        // Время скролла 400 = 0.4 секунды
-        animationTime: 600,
-        // Размер шага в пикселях 
-        stepSize: window.innerHeight / 10,
-        // Ускорение 
-        accelerationDelta: 100,
-        // Максимальное ускорение
-        accelerationMax: 2,
-        // Поддержка клавиатуры
-        keyboardSupport: true,
-        // Шаг скролла стрелками на клавиатуре в пикселях
-        arrowScroll: 50,
-        // Pulse (less tweakable)
-        // ratio of "tail" to "acceleration"
-        pulseAlgorithm: true,
-        pulseScale: 3,
-        pulseNormalize: 1,
-        // Поддержка тачпада
-        touchpadSupport: true,
-    });
-}
+// // Плавный скролл на сайте
+// if (window.innerWidth > 1024) {
+//     SmoothScroll({
+//         // Время скролла 400 = 0.4 секунды
+//         animationTime: 600,
+//         // Размер шага в пикселях 
+//         stepSize: window.innerHeight / 10,
+//         // Ускорение 
+//         accelerationDelta: 100,
+//         // Максимальное ускорение
+//         accelerationMax: 2,
+//         // Поддержка клавиатуры
+//         keyboardSupport: true,
+//         // Шаг скролла стрелками на клавиатуре в пикселях
+//         arrowScroll: 50,
+//         // Pulse (less tweakable)
+//         // ratio of "tail" to "acceleration"
+//         pulseAlgorithm: true,
+//         pulseScale: 3,
+//         pulseNormalize: 1,
+//         // Поддержка тачпада
+//         touchpadSupport: true,
+//     });
+// }
 
 
 const cardSliders = document.querySelectorAll('.cards-slider__container');
@@ -117,7 +117,6 @@ cardSliders.forEach(sliderContainer => {
             prevEl: prewBtn,
         },
         breakpoints: {
-
             580: {
                 slidesPerView: 2,
                 spaceBetween: 30,
@@ -153,9 +152,6 @@ $("[data-toggle-elem]").click(function () {
     $(this).parent().toggleClass('open')
     $(this).parent().find("[data-toggle-content]").slideToggle("slow");
 });
-
-
-
 
 
 const halfSlider = new Swiper('.half-slider', {
@@ -203,7 +199,6 @@ document.querySelector(".copy-block__btn").addEventListener("click", function ()
 
 
 
-
 const mobileBtn = document.querySelector('.mob-menu-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -215,16 +210,14 @@ document.addEventListener('click', (e) => {
         document.body.classList.toggle('hidden');
     }
 
-    if (target.closest('.close-mob')) {
+
+    if (target.closest('[data-site-link]')) {
+        e.preventDefault();
         mobileBtn.classList.remove('active');
         mobileMenu.classList.remove('active');
         document.body.classList.remove('hidden');
-        return;
-    }
-    if (target.closest('[data-site-link]')) {
-        e.preventDefault()
         const linkId = target.closest('[data-site-link]').dataset.siteLink;
-        $("html, body").animate({ scrollTop: $(`${linkId}`).offset().top }, 1000);
+        $("html, body").animate({ scrollTop: $(`${linkId}`).offset().top }, 500);
     }
 
 })

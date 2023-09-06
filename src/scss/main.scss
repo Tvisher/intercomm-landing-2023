@@ -2172,6 +2172,12 @@ body {
 }
 
 @media (max-width: 1300px) {
+  .header__nav {
+    display: none;
+  }
+  .header__btn {
+    display: none;
+  }
   .main-screen__date,
   .main-screen__place,
   .small-selection {
@@ -2365,12 +2371,6 @@ body {
     width: 132px !important;
     height: 105px !important;
   }
-  .header__nav {
-    display: none;
-  }
-  .header__btn {
-    display: none;
-  }
   .info-section,
   .sliders-section {
     padding-top: 150px;
@@ -2520,6 +2520,18 @@ body {
 }
 
 @media (max-width: 576px) {
+  .spinner-planet,
+  .flying-map__block .block__content,
+  .spinner-planet._reverse .spinner-planet__wrapper,
+  .faq-section .faq-item {
+    transform: none !important;
+  }
+  .spinner-planet._reverse {
+    transform: scale(-1, 1) !important;
+  }
+  .rocket {
+    display: none;
+  }
   .partners-section .partners__wrapper .partners__item {
     width: 100%;
   }
@@ -2797,7 +2809,7 @@ body {
     width: 100%;
     background-color: #fff;
   }
-  @media (max-width: 992px) {
+  @media (max-width: 1300px) {
     display: flex;
   }
   &.active {
@@ -2817,6 +2829,7 @@ body {
     opacity: 1;
     visibility: visible;
   }
+  // z-index: 100;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
