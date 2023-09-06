@@ -8,17 +8,17 @@
     <title>Sitename</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap&_v=20230906124028" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css?_v=20230906124028"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20230906124028" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.css?_v=20230906124028"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.css"
         integrity="sha512-yexU9hwne3MaLL2PG+YJDhaySS9NWcj6z7MvUDSoMhwNghPgXgcvYgVhfj4FMYpPh1Of7bt8/RK5A0rQ9fPMOw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/main.css?_v=20230906124028">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="preload" as="image" href="./img/main-image-large.jpg">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=0db64c2c-27fb-4602-9f62-88e37d902183&lang=ru_RU&_v=20230906124028"
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0db64c2c-27fb-4602-9f62-88e37d902183&lang=ru_RU"
         type="text/javascript">
         </script>
     <script> </script>
@@ -28,7 +28,7 @@
     <header class="header" data-aos="fade-down" data-aos-delay="1700" data-aos-duration="1200">
         <div class="container">
             <div class="header__wrapper">
-                <a href="#" class="header__logo">
+                <a href="https://vnutricom.ru/" class="header__logo">
                     <svg width="95" height="60" viewBox="0 0 95 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M35.9908 36.6248H32.999V21.9553H33.4117C33.5148 21.9553 33.618 21.9553 33.7212 21.9553C33.8243 21.9553 33.9275 21.9553 34.0307 21.9553C34.237 21.9553 34.4433 21.9553 34.6496 22.0579C34.856 22.0579 35.0623 22.1605 35.2686 22.2631C35.475 22.3657 35.6813 22.5708 35.7844 22.776C35.8876 22.8786 35.9908 23.1863 35.9908 23.4941V36.6248Z"
@@ -65,16 +65,30 @@
                             fill="white" />
                     </svg>
                 </a>
-                <div class="header__mob">
+                <nav class="header__nav">
+                    <a href="#" class="header__link">Премия</a>
+                    <a href="#" class="header__link">Медиа</a>
+                    <a href="#" class="header__link">Программа</a>
+                    <a href="#faq-section" class="header__link">FAQ</a>
+                    <a href="#" class="header__link">Партнерам</a>
+                    <a href="#contacts-section" class="header__link">Контакты</a>
+                </nav>
+                <a href="#white-section" class="btn header__btn">Билеты</a>
+                <div class="mob-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-menu">
                     <nav class="header__nav">
-                        <a href="#" class="header__link">Премия</a>
-                        <a href="#" class="header__link">Медиа</a>
-                        <a href="#" class="header__link">Программа</a>
-                        <a href="#" class="header__link">FAQ</a>
-                        <a href="#" class="header__link">Партнерам</a>
-                        <a href="#" class="header__link">Контакты</a>
+                        <a href="#" class="header__link close-mob">Премия</a>
+                        <a href="#" class="header__link close-mob">Медиа</a>
+                        <a href="#" class="header__link close-mob">Программа</a>
+                        <a href="#faq-section" class="header__link close-mob">FAQ</a>
+                        <a href="#" class="header__link close-mob">Партнерам</a>
+                        <a href="#contacts-section" class="header__link close-mob">Контакты</a>
                     </nav>
-                    <a href="" class="btn">Билеты</a>
+                    <a href="#white-section" class="btn header__btn close-mob">Билеты</a>
                 </div>
             </div>
         </div>
@@ -240,11 +254,11 @@
         <div class="spinner-planet" data-aos="fade-up" data-aos-duration="1500">
             <div class="spinner-planet__wrapper">
                 <div class="spinner-planet__container">
-                    <picture><source srcset="./img/spinner-planet.webp" type="image/webp"><img src="./img/spinner-planet.png" alt=""></picture>
+                    <img src="./img/spinner-planet.png" alt="">
                 </div>
             </div>
             <div class="rocket">
-                <picture><source srcset="./img/rocket.webp" type="image/webp"><img src="./img/rocket.png" alt=""></picture>
+                <img src="./img/rocket.png" alt="">
             </div>
         </div>
 
@@ -530,7 +544,7 @@
                 <div class="flying-map__block" data-block="1">
                     <div class="block__planet">
                         <div class="block__image">
-                            <picture><source srcset="./img/moon.webp" type="image/webp"><img src="./img/moon.png" alt="" data-aos="zoom-in" data-aos-duration="1200"></picture>
+                            <img src="./img/moon.png" alt="" data-aos="zoom-in" data-aos-duration="1200">
                             <div class="block__border" data-aos="fade-in" data-aos-duration="1200"></div>
                         </div>
                     </div>
@@ -544,7 +558,7 @@
                 <div class="flying-map__block" data-block="2">
                     <div class="block__planet">
                         <div class="block__image">
-                            <picture><source srcset="./img/jupiter.webp" type="image/webp"><img src="./img/jupiter.png" alt="" data-aos="zoom-in" data-aos-duration="1200"></picture>
+                            <img src="./img/jupiter.png" alt="" data-aos="zoom-in" data-aos-duration="1200">
                             <div class="block__border" data-aos="fade-in" data-aos-duration="1200"></div>
                         </div>
                     </div>
@@ -557,7 +571,7 @@
                 <div class="flying-map__block" data-block="3">
                     <div class="block__planet">
                         <div class="block__image">
-                            <picture><source srcset="./img/neptun.webp" type="image/webp"><img src="./img/neptun.png" alt="" data-aos="zoom-in" data-aos-duration="1200"></picture>
+                            <img src="./img/neptun.png" alt="" data-aos="zoom-in" data-aos-duration="1200">
                             <div class="block__border" data-aos="fade-in" data-aos-duration="1200"></div>
                         </div>
                     </div>
@@ -570,7 +584,7 @@
                 <div class="flying-map__block" data-block="4">
                     <div class="block__planet">
                         <div class="block__image">
-                            <picture><source srcset="./img/earth.webp" type="image/webp"><img src="./img/earth.png" alt="" data-aos="zoom-in" data-aos-duration="1200"></picture>
+                            <img src="./img/earth.png" alt="" data-aos="zoom-in" data-aos-duration="1200">
                             <div class="block__border" data-aos="fade-in" data-aos-duration="1200"></div>
                         </div>
                     </div>
@@ -585,7 +599,7 @@
                 <div class="flying-map__block" data-block="5">
                     <div class="block__planet">
                         <div class="block__image">
-                            <picture><source srcset="./img/planet-x.webp" type="image/webp"><img src="./img/planet-x.png" alt="" data-aos="zoom-in" data-aos-duration="1200"></picture>
+                            <img src="./img/planet-x.png" alt="" data-aos="zoom-in" data-aos-duration="1200">
                             <div class="block__border" data-aos="fade-in" data-aos-duration="1200"></div>
                         </div>
                     </div>
@@ -600,7 +614,7 @@
             <div class="spinner-planet _reverse">
                 <div class="spinner-planet__wrapper" data-aos="fade-up" data-aos-duration="1500">
                     <div class="spinner-planet__container">
-                        <picture><source srcset="./img/spinner-planet.webp" type="image/webp"><img src="./img/spinner-planet.png" alt=""></picture>
+                        <img src="./img/spinner-planet.png" alt="">
                     </div>
                 </div>
             </div>
@@ -639,7 +653,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/timur-yadgarov.webp" type="image/webp"><img src="./img/photos/timur-yadgarov.jpg" alt=""></picture>
+                                            <img src="./img/photos/timur-yadgarov.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Тимур Ядгаров</h4>
@@ -650,7 +664,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/mark-kukushkin.webp" type="image/webp"><img src="./img/photos/mark-kukushkin.jpg" alt=""></picture>
+                                            <img src="./img/photos/mark-kukushkin.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Марк Кукушкин </h4>
@@ -660,7 +674,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/timur-sokolov.webp" type="image/webp"><img src="./img/photos/timur-sokolov.jpg" alt=""></picture>
+                                            <img src="./img/photos/timur-sokolov.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Тимур Соколов </h4>
@@ -671,7 +685,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/ilin-aleksandr.webp" type="image/webp"><img src="./img/photos/ilin-aleksandr.jpg" alt=""></picture>
+                                            <img src="./img/photos/ilin-aleksandr.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Александр Ильин</h4>
@@ -681,7 +695,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/rudakova-larisa.webp" type="image/webp"><img src="./img/photos/rudakova-larisa.jpg" alt=""></picture>
+                                            <img src="./img/photos/rudakova-larisa.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Лариса Рудакова</h4>
@@ -692,7 +706,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/anna-smirnova.webp" type="image/webp"><img src="./img/photos/anna-smirnova.jpg" alt=""></picture>
+                                            <img src="./img/photos/anna-smirnova.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Анна Смирнова</h4>
@@ -731,7 +745,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/smyslova-mariya.webp" type="image/webp"><img src="./img/photos/smyslova-mariya.jpg" alt=""></picture>
+                                            <img src="./img/photos/smyslova-mariya.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Мария Смыслова</h4>
@@ -741,7 +755,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/" type="image/webp"><img src="./img/photos/" alt=""></picture>
+                                            <img src="./img/photos/" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Виктория Невская</h4>
@@ -750,7 +764,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/mariya-guseva.webp" type="image/webp"><img src="./img/photos/mariya-guseva.jpg" alt=""></picture>
+                                            <img src="./img/photos/mariya-guseva.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Мария Гусева </h4>
@@ -761,7 +775,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/kseniya-orlova.webp" type="image/webp"><img src="./img/photos/kseniya-orlova.jpg" alt=""></picture>
+                                            <img src="./img/photos/kseniya-orlova.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Ксения Орлова </h4>
@@ -772,7 +786,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/belonozhkina-yana.webp" type="image/webp"><img src="./img/photos/belonozhkina-yana.jpg" alt=""></picture>
+                                            <img src="./img/photos/belonozhkina-yana.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Яна Белоножкина </h4>
@@ -784,7 +798,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/elena-shurigina.webp" type="image/webp"><img src="./img/photos/elena-shurigina.jpg" alt=""></picture>
+                                            <img src="./img/photos/elena-shurigina.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Елена Шурыгина</h4>
@@ -794,7 +808,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/irehn-shkarovskaya.webp" type="image/webp"><img src="./img/photos/irehn-shkarovskaya.jpg" alt=""></picture>
+                                            <img src="./img/photos/irehn-shkarovskaya.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Ирэн Шкаровская</h4>
@@ -803,7 +817,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/shilina-anna.webp" type="image/webp"><img src="./img/photos/shilina-anna.jpg" alt=""></picture>
+                                            <img src="./img/photos/shilina-anna.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Анна Шилина</h4>
@@ -813,7 +827,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/mariya-reznik.webp" type="image/webp"><img src="./img/photos/mariya-reznik.jpg" alt=""></picture>
+                                            <img src="./img/photos/mariya-reznik.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Мария Резник </h4>
@@ -823,7 +837,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/kristina-ryazanceva.webp" type="image/webp"><img src="./img/photos/kristina-ryazanceva.jpg" alt=""></picture>
+                                            <img src="./img/photos/kristina-ryazanceva.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Кристина Рязанцева</h4>
@@ -833,7 +847,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/lyudmila-akatova.webp" type="image/webp"><img src="./img/photos/lyudmila-akatova.jpg" alt=""></picture>
+                                            <img src="./img/photos/lyudmila-akatova.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Людмила Акатова</h4>
@@ -844,7 +858,7 @@
                                 <div class="swiper-slide cards-slide">
                                     <div class="cards-slide__image">
                                         <div class="cards-slide__image-wraper">
-                                            <picture><source srcset="./img/photos/olga-ostanina.webp" type="image/webp"><img src="./img/photos/olga-ostanina.jpg" alt=""></picture>
+                                            <img src="./img/photos/olga-ostanina.jpg" alt="">
                                         </div>
                                     </div>
                                     <h4 class="cards-slide__title">Ольга Останина</h4>
@@ -905,14 +919,14 @@
                 <div class="conf-section__paralax" data-paralax-item="1" data-id="paralax-block">
                     <div class="conf-section__paralax__wrapper" data-depth="0.1">
                         <div class="conf-section__paralax__container" data-aos="zoom-in" data-aos-duration="1100">
-                            <picture><source srcset="./img/paralax-planet.webp" type="image/webp"><img src="./img/paralax-planet.png" alt=""></picture>
+                            <img src="./img/paralax-planet.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="conf-section__paralax" data-paralax-item="2" data-id="paralax-block">
                     <div class="conf-section__paralax__wrapper" data-depth="-0.1">
                         <div class="conf-section__paralax__container" data-aos="zoom-in" data-aos-duration="1100">
-                            <picture><source srcset="./img/astronaut.webp" type="image/webp"><img src="./img/astronaut.png" alt=""></picture>
+                            <img src="./img/astronaut.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -920,12 +934,12 @@
             <div class="spinner-planet" data-aos="fade-up" data-aos-duration="1500">
                 <div class="spinner-planet__wrapper">
                     <div class="spinner-planet__container">
-                        <picture><source srcset="./img/spinner-planet.webp" type="image/webp"><img src="./img/spinner-planet.png" alt=""></picture>
+                        <img src="./img/spinner-planet.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="faq-section">
+        <section class="faq-section" id="faq-section">
             <div class="container">
                 <h3 class="cards-slider__title" data-aos="fade-in">
                     Отвечаем на часто задаваемые вопросы
@@ -1049,7 +1063,7 @@
                 </div>
             </div>
         </section>
-        <section class="white-section">
+        <section class="white-section" id="white-section">
             <div class="container">
                 <div class="white-section__head">
                     <div class="white-section__left">
@@ -1133,7 +1147,7 @@
             <div class="conf-section__paralax" data-id="paralax-block">
                 <div class="conf-section__paralax__wrapper" data-depth="-0.1">
                     <div class="conf-section__paralax__container" data-aos="zoom-in-right" data-aos-duration="1100">
-                        <picture><source srcset="./img/satellite.webp" type="image/webp"><img src="./img/satellite.png" alt=""></picture>
+                        <img src="./img/satellite.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1171,7 +1185,7 @@
                                     </a>
                                 </div>
                                 <div class="half-slide__iamge">
-                                    <picture><source srcset="./img/half-slide-1.webp" type="image/webp"><img src="./img/half-slide-1.jpg" alt=""></picture>
+                                    <img src="./img/half-slide-1.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1199,7 +1213,7 @@
                                     </a>
                                 </div>
                                 <div class="half-slide__iamge">
-                                    <picture><source srcset="./img/centered-slide-1.webp" type="image/webp"><img src="./img/centered-slide-1.jpg" alt=""></picture>
+                                    <img src="./img/centered-slide-1.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1227,7 +1241,7 @@
                                     </a>
                                 </div>
                                 <div class="half-slide__iamge">
-                                    <picture><source srcset="./img/centered-slide-2.webp" type="image/webp"><img src="./img/centered-slide-2.jpg" alt=""></picture>
+                                    <img src="./img/centered-slide-2.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1268,37 +1282,37 @@
                     </div>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-1.webp" type="image/webp"><img src="./img/centered-slide-1.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-1.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-2.webp" type="image/webp"><img src="./img/centered-slide-2.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-2.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-3.webp" type="image/webp"><img src="./img/centered-slide-3.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-3.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-1.webp" type="image/webp"><img src="./img/centered-slide-1.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-1.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-2.webp" type="image/webp"><img src="./img/centered-slide-2.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-2.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-3.webp" type="image/webp"><img src="./img/centered-slide-3.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-3.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-1.webp" type="image/webp"><img src="./img/centered-slide-1.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-1.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-1.webp" type="image/webp"><img src="./img/centered-slide-1.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-1.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-2.webp" type="image/webp"><img src="./img/centered-slide-2.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-2.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-3.webp" type="image/webp"><img src="./img/centered-slide-3.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-3.jpg" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <picture><source srcset="./img/centered-slide-1.webp" type="image/webp"><img src="./img/centered-slide-1.jpg" alt=""></picture>
+                            <img src="./img/centered-slide-1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -1311,7 +1325,7 @@
                 </h2>
                 <div class="map__container" data-aos="fade-in" data-aos-duration="1200">
                     <div class="map__wrapper">
-                        <!-- <picture><source srcset="./img/map.webp" type="image/webp"><img src="./img/map.jpg" alt=""></picture> -->
+                        <!-- <img src="./img/map.jpg" alt=""> -->
                         <div id="map"></div>
                     </div>
                 </div>
@@ -1660,7 +1674,7 @@
                 <div class="organizers__wrapper">
                     <div class="organizer" data-aos="fade-in" data-aos-duration="1200">
                         <div class="organizer__logo">
-                            <picture><source srcset="./img/org-logo-1.webp" type="image/webp"><img src="./img/org-logo-1.png" alt=""></picture>
+                            <img src="./img/org-logo-1.png" alt="">
                         </div>
                         <div class="organizer__title">Учредитель и организатор премии — медиапортал InterComm.media
                         </div>
@@ -1670,7 +1684,7 @@
                     </div>
                     <div class="organizer" data-aos="fade-in" data-aos-duration="1200">
                         <div class="organizer__logo">
-                            <picture><source srcset="./img/org-logo-2.webp" type="image/webp"><img src="./img/org-logo-2.png" alt=""></picture>
+                            <img src="./img/org-logo-2.png" alt="">
                         </div>
                         <div class="organizer__title">Организационный партнер — коммуникационная группа<br> «МедиаЛайн»
                         </div>
@@ -1685,7 +1699,7 @@
             </div>
         </section>
 
-        <section class="contacts-section">
+        <section class="contacts-section" id="contacts-section">
             <div class="container">
                 <h4 class="section-title" data-aos="fade-in" data-aos-duration="1200">Контакты</h4>
                 <div class="contacts__wrapper">
@@ -1859,7 +1873,7 @@
     <div class="container">
         <div class="footer__wrapper">
             <div class="footer__block">
-                <div class="footer__logo">
+                <a href="https://vnutricom.ru/" class="footer__logo">
                     <svg width="95" height="59" viewBox="0 0 95 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M35.9908 35.773H32.999V21.1035H33.4117C33.5148 21.1035 33.618 21.1035 33.7212 21.1035C33.8243 21.1035 33.9275 21.1035 34.0307 21.1035C34.237 21.1035 34.4433 21.1035 34.6496 21.2061C34.856 21.2061 35.0623 21.3087 35.2686 21.4113C35.475 21.5139 35.6813 21.719 35.7844 21.9242C35.8876 22.0268 35.9908 22.3345 35.9908 22.6423V35.773Z"
@@ -1896,9 +1910,10 @@
                             fill="white" />
                     </svg>
 
-                </div>
+                </a>
                 <div class="logo-descr">intercomm.media © 2023.<br> All Rights Reserved</div>
-                <div class="make-from">Сделано в <span style="color: #FA0056;">MediaLine</span></div>
+                <div class="make-from">Сделано в <a href="https://mlgr.ru/"
+                        style="color: #FA0056; display: inline;">MediaLine</a></div>
             </div>
 
             <div class="footer__block">
@@ -1954,7 +1969,7 @@
 
 
             <div class="footer__block">
-                <a href="javascript:void(0)" class="card__basket">
+                <a href="#white-section" class="card__basket">
                     <span>Билеты</span>
                     <div class="ico">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1965,43 +1980,7 @@
                     </div>
                 </a>
                 <div class="socials">
-                    <a href="#" class="social__item" data-social="Whatsapp">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_229_1449)">
-                                <path
-                                    d="M0 22L1.55492 16.3536C0.5936 14.6963 0.0893027 12.8194 0.0945558 10.9007C0.0945558 4.88831 5.01146 0 11.0473 0C13.9785 0 16.7311 1.13451 18.7956 3.19439C20.8653 5.25428 22.0052 7.99382 22 10.9059C22 16.9183 17.0831 21.8066 11.042 21.8066H11.0368C9.20343 21.8066 7.40162 21.3465 5.79942 20.4786L0 22ZM6.07784 18.5076L6.40878 18.7063C7.80611 19.5323 9.4083 19.9663 11.042 19.9715H11.0473C16.064 19.9715 20.1509 15.9092 20.1509 10.9111C20.1509 8.49049 19.2053 6.21625 17.4876 4.50143C15.7698 2.7866 13.4795 1.84553 11.0473 1.84553C6.03056 1.8403 1.94365 5.90257 1.94365 10.9007C1.94365 12.6103 2.42168 14.278 3.33572 15.721L3.5511 16.0661L2.6318 19.4068L6.07784 18.5076Z"
-                                    fill="url(#paint0_linear_229_1449)" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M8.31054 6.341C8.10567 5.88615 7.89029 5.87569 7.69593 5.87046C7.53834 5.86523 7.35448 5.86523 7.17062 5.86523C6.98676 5.86523 6.69259 5.9332 6.44044 6.20506C6.18829 6.47693 5.48438 7.13567 5.48438 8.4793C5.48438 9.8177 6.4667 11.1143 6.60328 11.2973C6.73987 11.4803 8.49965 14.3191 11.2785 15.4118C13.5899 16.3215 14.0627 16.1385 14.5617 16.0915C15.0608 16.0444 16.1797 15.4327 16.4108 14.7949C16.6367 14.1571 16.6367 13.6133 16.5684 13.4983C16.5001 13.3833 16.3163 13.3153 16.0431 13.1794C15.7699 13.0435 14.4251 12.3847 14.173 12.2906C13.9209 12.2017 13.737 12.1547 13.5584 12.4265C13.3745 12.6984 12.8492 13.3101 12.6916 13.4931C12.534 13.6761 12.3712 13.697 12.098 13.561C11.8249 13.4251 10.9423 13.1376 9.89698 12.207C9.08275 11.4855 8.53117 10.5915 8.37358 10.3196C8.21599 10.0477 8.35782 9.90136 8.4944 9.76542C8.61522 9.64518 8.76756 9.44651 8.90414 9.28966C9.04072 9.13282 9.088 9.0178 9.1773 8.83482C9.26661 8.65183 9.22458 8.49499 9.15629 8.35905C9.088 8.22835 8.55218 6.87949 8.31054 6.341Z"
-                                    fill="white" />
-                            </g>
-                            <defs>
-                                <linearGradient id="paint0_linear_229_1449" x1="11.0021" y1="21.9979" x2="11.0021"
-                                    y2="0" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#F9F9F9" />
-                                    <stop offset="1" stop-color="white" />
-                                </linearGradient>
-                                <clipPath id="clip0_229_1449">
-                                    <rect width="22" height="22" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
-                    <a href="#" class="social__item" data-social="Odnoklassniki">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_229_1452)">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M18.7172 21.8897C20.468 21.8897 21.8873 20.4949 21.8873 18.7743V3.71509C21.8873 1.99449 20.468 0.599609 18.7172 0.599609H3.28331C1.53259 0.599609 0.113281 1.99444 0.113281 3.71509V18.7743C0.113281 20.4949 1.53253 21.8897 3.28331 21.8897H18.7172ZM10.988 3.7041C8.80758 3.7041 7.04008 5.44124 7.04008 7.58404C7.04008 9.72689 8.80758 11.4641 10.988 11.4641C13.1683 11.4641 14.9358 9.72689 14.9358 7.58404C14.9358 5.44124 13.1683 3.7041 10.988 3.7041ZM10.988 9.18803C10.0867 9.18803 9.35599 8.46987 9.35599 7.58409C9.35599 6.69831 10.0867 5.98021 10.988 5.98021C11.8892 5.98021 12.6199 6.69831 12.6199 7.58409C12.6199 8.46987 11.8892 9.18803 10.988 9.18803ZM12.382 14.5513C13.9625 14.2348 14.9096 13.4993 14.9597 13.4598C15.4222 13.0953 15.4965 12.4313 15.1256 11.9767C14.7547 11.5222 14.0792 11.4492 13.6166 11.8136C13.6068 11.8214 12.5967 12.583 10.9346 12.5841C9.27257 12.583 8.24105 11.8214 8.23128 11.8136C7.76869 11.4492 7.09316 11.5222 6.72231 11.9767C6.35141 12.4313 6.4257 13.0953 6.88819 13.4598C6.93898 13.4998 7.92518 14.2546 9.54997 14.5635L7.28553 16.8894C6.87401 17.3088 6.88638 17.9766 7.31315 18.3811C7.52146 18.5785 7.78993 18.6766 8.05817 18.6766C8.33941 18.6766 8.62037 18.5686 8.83099 18.3539L10.9346 16.1515L13.2508 18.3681C13.6704 18.7799 14.35 18.7792 14.7688 18.367C15.1877 17.9547 15.1872 17.2867 14.7677 16.875L12.382 14.5513Z"
-                                    fill="white" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_229_1452">
-                                    <rect width="22" height="21.5111" fill="white" transform="translate(0 0.488281)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
-                    <a href="#" class="social__item" data-social="Telegram">
+                    <a href="https://t.me/inter_comm" class="social__item" data-social="Telegram">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_229_1459)">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -2015,7 +1994,7 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#" class="social__item" data-social="VK">
+                    <a href="https://vk.com/intercomm_media" class="social__item" data-social="VK">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_229_1463)">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -2029,7 +2008,7 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#" class="social__item" data-social="youtube">
+                    <a href="https://youtube.com/@intercomm1283" class="social__item" data-social="youtube">
                         <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M4.13793 3C1.85261 3 0 4.85261 0 7.13793V15.4138C0 17.6991 1.85262 19.5517 4.13793 19.5517H19.8621C22.1474 19.5517 24 17.6991 24 15.4138V7.13793C24 4.85261 22.1474 3 19.8621 3H4.13793ZM15.7241 11.6897L9.93103 7.96552V15.4138L15.7241 11.6897Z"
@@ -2045,16 +2024,16 @@
 </footer>
 </body>
 
-<script src="./js/SmoothScroll.min.js?_v=20230906124028"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js?_v=20230906124028"
+<script src="./js/SmoothScroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
     integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20230906124028"></script>
-<script src="./js/plyr.js?_v=20230906124028"></script>
-<script src="./js/parallax.min.js?_v=20230906124028"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js?_v=20230906124028"
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="./js/plyr.js"></script>
+<script src="./js/parallax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./js/app.js?_v=20230906124028"></script>
+<script src="./js/app.js"></script>
 
 </html>

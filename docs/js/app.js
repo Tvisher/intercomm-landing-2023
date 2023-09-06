@@ -203,3 +203,20 @@ document.querySelector(".copy-block__btn").addEventListener("click", function ()
 
 
 
+const mobileBtn = document.querySelector('.mob-menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (target.closest('.mob-menu-btn')) {
+        mobileBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.classList.toggle('hidden');
+    }
+
+    if (target.closest('.close-mob')) {
+        mobileBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('hidden');
+    }
+})
