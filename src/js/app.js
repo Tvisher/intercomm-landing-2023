@@ -58,7 +58,8 @@ const verticalSextSlider = new Swiper('.vertical-text-slider', {
     on: {
         init(swiper) {
             const slidesLength = swiper.slides.length;
-            verticalSliderSection.style.height = `${(slidesLength + 1) * 100}vh`;
+            // verticalSliderSection.style.height = `${(slidesLength + 1) * 100}vh`;
+            // console.log(slidesLength + 1);
             window.addEventListener('scroll', (e) => {
                 const sliderTrigger = verticalSliderSection.getBoundingClientRect().top <= 0;
                 if (sliderTrigger) {
@@ -218,10 +219,16 @@ document.addEventListener('click', (e) => {
         mobileBtn.classList.remove('active');
         mobileMenu.classList.remove('active');
         document.body.classList.remove('hidden');
-        setTimeout(() => {
-            AOS.refresh();
-        }, 100);
         return;
+    }
+    if (target.closest('[data-site-link]')) {
+        e.preventDefault()
+        const linkId = target.closest('[data-site-link]').dataset.siteLink;
+        $("html, body").animate({ scrollTop: $(`${linkId}`).offset().top }, 1000);
     }
 
 })
+
+
+
+
