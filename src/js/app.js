@@ -15,11 +15,11 @@ function testWebP() {
 testWebP();
 
 
-const bgVideo = new Plyr('#bgVideo', {
-    controls: [],
-    muted: true,
-    loop: { active: true }
-});
+// const bgVideo = new Plyr('#bgVideo', {
+//     controls: [],
+//     muted: true,
+//     loop: { active: true }
+// });
 
 const player = new Plyr('#player', {
     controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'fullscreen'],
@@ -37,7 +37,7 @@ window.addEventListener('load', (e) => {
         once: true, // whether animation should happen only once - while scrolling down
     });
     setTimeout(() => {
-        bgVideo.play()
+        document.querySelector('#bgVideo').play()
     }, 600);
 })
 
@@ -218,5 +218,10 @@ document.addEventListener('click', (e) => {
         mobileBtn.classList.remove('active');
         mobileMenu.classList.remove('active');
         document.body.classList.remove('hidden');
+        setTimeout(() => {
+            AOS.refresh();
+        }, 100);
+        return;
     }
+
 })
