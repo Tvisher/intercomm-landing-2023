@@ -219,9 +219,20 @@ document.addEventListener('click', (e) => {
         const linkId = target.closest('[data-site-link]').dataset.siteLink;
         $("html, body").animate({ scrollTop: $(`${linkId}`).offset().top }, 500);
     }
-
 })
 
+const toTopBtn = document.querySelector('#to-top-btn');
+toTopBtn.onclick = (e) => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+}
+
+window.addEventListener('scroll', (e) => {
+    window.scrollY > window.innerHeight ? toTopBtn.classList.add('show') : toTopBtn.classList.remove('show')
+});
 
 
 
